@@ -120,8 +120,7 @@ export class PublicLobby extends LitElement {
             </div>
             <div class="flex flex-col items-start">
               <div class="text-md font-medium text-blue-100">
-                ${lobby.numClients} / ${lobby.gameConfig.maxPlayers} players
-                waiting
+                next game starts in ...
               </div>
             </div>
             <div class="flex items-center">

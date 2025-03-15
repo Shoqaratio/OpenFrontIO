@@ -82,8 +82,6 @@ function getServerConfig(gameEnv: string) {
     case "prod":
       consolex.log("using prod server config");
       return prodConfig;
-    default:
-      throw Error(`unsupported server configuration: ${gameEnv}`);
   }
 }
 

@@ -92,7 +92,7 @@ export class UsernameInput extends LitElement {
   }
 
   private generateNewUsername(): string {
-    const newUsername = "Anon" + this.uuidToThreeDigits();
+    const newUsername = "Player " + this.uuidToThreeDigits();
     this.storeUsername(newUsername);
     return newUsername;
   }

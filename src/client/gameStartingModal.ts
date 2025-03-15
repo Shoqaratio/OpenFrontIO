@@ -88,8 +88,8 @@ export class GameStartingModal extends LitElement {
   render() {
     return html`
       <div class="modal ${this.isVisible ? "visible" : ""}">
-        <h2>Game is Starting...</h2>
-        <p>Preparing for the lobby to start. Please wait.</p>
+        <h2>Game is starting...</h2>
+        <p>Game is currently starting, please wait few seconds...</p>
       </div>
     `;
   }

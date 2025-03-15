@@ -91,7 +91,6 @@ export class TradeShipExecution implements Execution {
         return;
       } else {
         this._dstPort = ports[0];
-        this.tradeShip.setDstPort(this._dstPort);
       }
     }
 

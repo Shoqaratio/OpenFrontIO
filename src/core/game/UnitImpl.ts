@@ -62,6 +62,9 @@ export class UnitImpl implements Unit {
   }
 
   type(): UnitType {
+    if (this._type == null) {
+        return null;
+    }
     return this._type;
   }
 
@@ -71,12 +74,14 @@ export class UnitImpl implements Unit {
 
   move(tile: TileRef): void {
     if (tile == null) {
-      throw new Error("tile cannot be null");
+        console.error("Attempted to move unit to a null tile");
+        return;
     }
     this._lastTile = this._tile;
     this._tile = tile;
     this.mg.addUpdate(this.toUpdate());
-  }
+}
+
   setTroops(troops: number): void {
     this._troops = troops;
   }
@@ -179,9 +184,5 @@ export class UnitImpl implements Unit {
 
   dstPort(): Unit {
     return this._dstPort;
-  }
-
-  setDstPort(dstPort: Unit): void {
-    this._dstPort = dstPort;
   }
 }

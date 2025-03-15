@@ -234,7 +234,6 @@ export interface Unit {
   setWarshipTarget(target: Unit): void; // warship only
   warshipTarget(): Unit;
 
-  setDstPort(dstPort: Unit): void;
   dstPort(): Unit; // Only for trade ships
   detonationDst(): TileRef; // Only for nukes
 
