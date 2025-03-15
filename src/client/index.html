@@ -139,25 +139,28 @@
     <script>
       // function if is on mobile devive
       function isMobileDevice() {
-        return /Mobi|Android|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent);
+        return /Mobi|Android|iPhone|iPad|iPod|Opera Mini/i.test(
+          navigator.userAgent,
+        );
       }
-    
+
       // display notification and remove it after 10 sec
       window.addEventListener("load", function () {
         if (isMobileDevice()) {
-          var notification = document.createElement('div');
-          notification.className = 'mobile-notification';
-          notification.innerText = "We don't recommend playing on mobile due to small resolution.";
+          var notification = document.createElement("div");
+          notification.className = "mobile-notification";
+          notification.innerText =
+            "We don't recommend playing on mobile due to small resolution.";
           document.body.appendChild(notification);
-          notification.style.display = 'block';
-    
+          notification.style.display = "block";
+
           // remove it
           setTimeout(function () {
-            notification.style.display = 'none';
+            notification.style.display = "none";
           }, 10000);
         }
       });
-    </script>    
+    </script>
 
     <!-- Analytics -->
     <script
@@ -200,7 +203,7 @@
 
     <div class="bg-image"></div>
 
-    <!-- Left gutter ad placement - full height, no empty space -->
+    <!-- Left gutter ad placement - full height, no empty space 
     <div class="left-gutter-ad ad">
       <google-ad
         adSlot="5220834834"
@@ -215,7 +218,7 @@
         adFormat="vertical"
         fullWidthResponsive="false"
       ></google-ad>
-    </div>
+    </div>-->
 
     <dark-mode-button></dark-mode-button>
 
@@ -257,7 +260,7 @@
             id="single-player"
             class="w-full bg-blue-600 hover:bg-blue-700 text-white p-3 sm:p-4 lg:p-5 font-bold text-lg sm:text-xl lg:text-2xl rounded-lg border-none cursor-pointer transition-colors duration-300"
           >
-            Single Player
+            Singleplayer
           </button>
         </div>
 
@@ -268,7 +271,7 @@
             id="help-button"
             class="w-25 bg-blue-100 hover:bg-blue-200 text-blue-900 p-3 sm:p-4 lg:p-5 font-medium text-sm sm:text-base lg:text-lg rounded-md w-full border-none cursor-pointer transition-colors duration-300"
           >
-            Instructions
+            Help
           </button>
         </div>
       </div>
@@ -333,6 +336,12 @@
             >GalaxiaFN.uk is a fork of OpenFront that adds more features and
             servers in Europe.</a
           >
+          <a
+            class="hover:text-white transition-colors duration-300"
+            href="https://openfront.fandom.com/wiki/Openfront_Wiki"
+            target="_blank"
+            >Click here to go on the Wiki!</a
+          >
         </div>
       </div>
     </div>
@@ -346,12 +355,5 @@
         });
       });
     </script>
-
-    <!-- Analytics -->
-    <script
-      defer
-      src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": "03d93e6fefb3495e944a8fa2d3c5e98b"}'
-    ></script>
   </body>
 </html>

@@ -12,6 +12,6 @@ export const prodConfig = new (class extends DefaultServerConfig {
     return GameEnv.Prod;
   }
   discordRedirectURI(): string {
-    return "https://openfront.io/auth/callback";
+    return "https://galaxiafn.uk/auth/callback";
   }
 })();
