@@ -14,6 +14,7 @@ export class StatsImpl implements Stats {
         [UnitType.MIRV]: 0,
         [UnitType.MIRVWarhead]: 0,
         [UnitType.AtomBomb]: 0,
+        [UnitType.TsarBomb]: 0,
         [UnitType.HydrogenBomb]: 0,
       };
     }

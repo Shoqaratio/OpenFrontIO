@@ -35,16 +35,9 @@ export class DiscordBot {
     });
   }
 
-  private async getToken(): Promise<string | undefined> {
-    const name =
-      "projects/openfrontio/secrets/discord-bot-token/versions/latest";
-    const [version] = await this.secretManager.accessSecretVersion({ name });
-    return version.payload?.data?.toString().trim();
-  }
-
   public async start(): Promise<void> {
     try {
-      const token = await this.getToken();
+      const token = "TOKEN_HERE";
       if (!token) {
         throw new Error("Failed to retrieve Discord token");
       }

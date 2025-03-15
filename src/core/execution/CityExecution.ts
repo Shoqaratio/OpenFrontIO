@@ -13,6 +13,7 @@ export class CityExecution implements Execution {
   private player: Player;
   private mg: Game;
   private city: Unit;
+  private capital: Unit;
   private active: boolean = true;
 
   constructor(
@@ -41,6 +42,20 @@ export class CityExecution implements Execution {
       this.city = this.player.buildUnit(UnitType.City, 0, spawnTile);
     }
     if (!this.city.isActive()) {
+      this.active = false;
+      return;
+    }
+
+    if (this.capital == null) {
+      const spawnTile = this.player.canBuild(UnitType.Capital, this.tile);
+      if (spawnTile == false) {
+        consolex.warn("cannot build capital");
+        this.active = false;
+        return;
+      }
+      this.capital = this.player.buildUnit(UnitType.Capital, 0, spawnTile);
+    }
+    if (!this.capital.isActive()) {
       this.active = false;
       return;
     }

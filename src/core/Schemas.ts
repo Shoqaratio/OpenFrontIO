@@ -138,6 +138,7 @@ const ID = z
 
 const NukesEnum = z.enum([
   "Atom Bomb",
+  "Tsar Bomb",
   "Hydrogen Bomb",
   "MIRV",
   "MIRV Warhead",

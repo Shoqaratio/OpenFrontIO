@@ -47,6 +47,11 @@ const buildTable: BuildItemDisplay[][] = [
       description: "Large explosion",
     },
     {
+      unitType: UnitType.TsarBomb,
+      icon: hydrogenBombIcon,
+      description: "Big big explosion",
+    },
+    {
       unitType: UnitType.Warship,
       icon: warshipIcon,
       description: "Captures trade ships, destroys ships and boats",
@@ -76,6 +81,11 @@ const buildTable: BuildItemDisplay[][] = [
       unitType: UnitType.City,
       icon: cityIcon,
       description: "Increase max population",
+    },
+    {
+      unitType: UnitType.Capital,
+      icon: cityIcon,
+      description: "Create capital for your country",
     },
   ],
 ];

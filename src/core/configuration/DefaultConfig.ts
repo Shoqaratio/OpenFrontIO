@@ -207,6 +207,16 @@ export class DefaultConfig implements Config {
             p.type() == PlayerType.Human && this.infiniteGold() ? 0 : 5_000_000,
           territoryBound: false,
         };
+
+      case UnitType.TsarBomb:
+        return {
+          cost: (p: Player) =>
+            p.type() == PlayerType.Human && this.infiniteGold()
+              ? 0
+              : 12_500_000,
+          territoryBound: false,
+        };
+
       case UnitType.MIRV:
         return {
           cost: (p: Player) =>
@@ -270,7 +280,24 @@ export class DefaultConfig implements Config {
                   Math.pow(
                     2,
                     p.unitsIncludingConstruction(UnitType.City).length,
-                  ) * 250_000,
+                  ) * 100_000,
+                ),
+          territoryBound: true,
+          constructionDuration: this.instantBuild() ? 0 : 2 * 10,
+        };
+      case UnitType.Capital:
+        return {
+          cost: (p: Player) =>
+            p.type() == PlayerType.Human &&
+            this.infiniteGold() &&
+            UnitType.Capital.length > 1
+              ? 0
+              : Math.min(
+                  5_000_000,
+                  Math.pow(
+                    2,
+                    p.unitsIncludingConstruction(UnitType.Capital).length,
+                  ) * 2_500_000,
                 ),
           territoryBound: true,
           constructionDuration: this.instantBuild() ? 0 : 2 * 10,
@@ -470,7 +497,8 @@ export class DefaultConfig implements Config {
       player.type() == PlayerType.Human && this.infiniteTroops()
         ? 1_000_000_000 // 1 billion
         : 2 * (Math.pow(player.numTilesOwned(), 0.6) * 1000 + 50000) +
-          player.units(UnitType.City).length * this.cityPopulationIncrease();
+          player.units(UnitType.City).length * this.cityPopulationIncrease() +
+          player.units(UnitType.Capital).length * 2_500_000;
 
     if (player.type() == PlayerType.Bot) {
       return maxPop / 2;

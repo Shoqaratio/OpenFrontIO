@@ -97,6 +97,11 @@ export class ConstructionExecution implements Execution {
           new NukeExecution(this.constructionType, player.id(), this.tile),
         );
         break;
+      case UnitType.TsarBomb:
+        this.mg.addExecution(
+          new NukeExecution(this.constructionType, player.id(), this.tile),
+        );
+        break;
       case UnitType.MIRV:
         this.mg.addExecution(new MirvExecution(player.id(), this.tile));
         break;
@@ -116,6 +121,9 @@ export class ConstructionExecution implements Execution {
         this.mg.addExecution(new SAMLauncherExecution(player.id(), this.tile));
         break;
       case UnitType.City:
+        this.mg.addExecution(new CityExecution(player.id(), this.tile));
+        break;
+      case UnitType.Capital:
         this.mg.addExecution(new CityExecution(player.id(), this.tile));
         break;
       default:

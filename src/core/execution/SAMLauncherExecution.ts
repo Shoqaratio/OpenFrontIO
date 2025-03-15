@@ -62,7 +62,7 @@ export class SAMLauncherExecution implements Execution {
     }
 
     const nukes = this.mg
-      .units(UnitType.AtomBomb, UnitType.HydrogenBomb)
+      .units(UnitType.AtomBomb, UnitType.HydrogenBomb, UnitType.TsarBomb)
       .filter(
         (u) =>
           this.mg.manhattanDist(u.tile(), this.post.tile()) < this.searchRange,

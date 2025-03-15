@@ -75,6 +75,14 @@ export class NukeExecution implements Execution {
           );
         }
 
+        if (this.type == UnitType.TsarBomb) {
+          this.mg.displayMessage(
+            `${this.player.name()} - Tsar bomb inbound`,
+            MessageType.ERROR,
+            target.id(),
+          );
+        }
+
         this.mg
           .stats()
           .increaseNukeCount(
@@ -149,6 +157,9 @@ export class NukeExecution implements Execution {
       case UnitType.AtomBomb:
         magnitude = { inner: 12, outer: 30 };
         break;
+      case UnitType.TsarBomb:
+        magnitude = { inner: 30, outer: 75 };
+        break;
       case UnitType.HydrogenBomb:
         magnitude = { inner: 80, outer: 100 };
         break;
@@ -195,6 +206,7 @@ export class NukeExecution implements Execution {
       if (
         unit.type() != UnitType.AtomBomb &&
         unit.type() != UnitType.HydrogenBomb &&
+        unit.type() != UnitType.TsarBomb &&
         unit.type() != UnitType.MIRVWarhead &&
         unit.type() != UnitType.MIRV
       ) {

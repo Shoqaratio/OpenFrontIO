@@ -75,11 +75,13 @@ export enum UnitType {
   Port = "Port",
   AtomBomb = "Atom Bomb",
   HydrogenBomb = "Hydrogen Bomb",
+  TsarBomb = "Tsar Bomb",
   TradeShip = "Trade Ship",
   MissileSilo = "Missile Silo",
   DefensePost = "Defense Post",
   SAMLauncher = "SAM Launcher",
   City = "City",
+  Capital = "Capital",
   MIRV = "MIRV",
   MIRVWarhead = "MIRV Warhead",
   Construction = "Construction",
@@ -88,6 +90,7 @@ export enum UnitType {
 export const nukeTypes = [
   UnitType.AtomBomb,
   UnitType.HydrogenBomb,
+  UnitType.TsarBomb,
   UnitType.MIRVWarhead,
   UnitType.MIRV,
 ] as UnitType[];

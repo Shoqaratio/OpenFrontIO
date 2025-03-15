@@ -685,6 +685,8 @@ export class PlayerImpl implements Player {
       case UnitType.AtomBomb:
       case UnitType.HydrogenBomb:
         return this.nukeSpawn(targetTile);
+      case UnitType.TsarBomb:
+        return this.nukeSpawn(targetTile);
       case UnitType.MIRVWarhead:
         return targetTile;
       case UnitType.Port:
@@ -702,6 +704,7 @@ export class PlayerImpl implements Player {
       case UnitType.DefensePost:
       case UnitType.SAMLauncher:
       case UnitType.City:
+      case UnitType.Capital:
       case UnitType.Construction:
         return this.landBasedStructureSpawn(targetTile);
       default:
