@@ -212,7 +212,7 @@ export class DefaultConfig implements Config {
           cost: (p: Player) =>
             p.type() == PlayerType.Human && this.infiniteGold()
               ? 0
-              : 15_000_000,
+              : 30_000_000, // over cheat so
           territoryBound: false,
         };
       case UnitType.MIRVWarhead:
@@ -270,7 +270,7 @@ export class DefaultConfig implements Config {
                   Math.pow(
                     2,
                     p.unitsIncludingConstruction(UnitType.City).length,
-                  ) * 125_000,
+                  ) * 250_000,
                 ),
           territoryBound: true,
           constructionDuration: this.instantBuild() ? 0 : 2 * 10,
@@ -469,7 +469,7 @@ export class DefaultConfig implements Config {
     const maxPop =
       player.type() == PlayerType.Human && this.infiniteTroops()
         ? 1_000_000_000 // 1 billion
-        : 2 * (Math.pow(player.numTilesOwned(), 0.6) * 1000 + 100000) + // 100k now because bro 1M
+        : 2 * (Math.pow(player.numTilesOwned(), 0.6) * 1000 + 50000) +
           player.units(UnitType.City).length * this.cityPopulationIncrease();
 
     if (player.type() == PlayerType.Bot) {

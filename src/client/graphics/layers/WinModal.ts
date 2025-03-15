@@ -159,26 +159,26 @@ export class WinModal extends LitElement implements Layer {
   }
 
   updated(changedProperties) {
-    super.updated(changedProperties);
-    // Initialize ads if modal is visible and showing ads
+    console.log("NO ADSENSE!");
+    /*super.updated(changedProperties);
     if (changedProperties.has("isVisible") && this.isVisible && !this.won) {
       try {
         setTimeout(() => {
           (adsbygoogle = window.adsbygoogle || []).push({});
         }, 0);
-      } catch (error) {
-        console.error("Error initializing ad:", error);
-      }
-    }
+       } catch (error) {
+         console.error("Error initializing ad:", error);
+       }
+   }*/
   }
 
   supportHTML() {
     return html`
       <div style="text-align: center; margin: 15px 0;">
         <p>
-          Like the game? Help make this my full-time project!
+          Like the game? Help make this a full-time project!
           <a
-            href="https://discord.gg/k22YrnAzGp"
+            href="https://github.com/Shoqaratio/OpenFrontIO"
             target="_blank"
             rel="noopener noreferrer"
             style="color: #0096ff; text-decoration: underline; display: block; margin-top: 5px;"

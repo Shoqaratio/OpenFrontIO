@@ -75,7 +75,7 @@ const buildTable: BuildItemDisplay[][] = [
     {
       unitType: UnitType.City,
       icon: cityIcon,
-      description: "Increase max population by 100 000",
+      description: "Increase max population",
     },
   ],
 ];

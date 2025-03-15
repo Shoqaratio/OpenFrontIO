@@ -77,10 +77,11 @@ export class GoogleAdElement extends LitElement {
     setTimeout(() => {
       try {
         // Initialize this specific ad
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-        console.log("Ad initialized for slot:", this.adSlot);
+        /*(window.adsbygoogle = window.adsbygoogle || []).push({});
+        console.log("Ad initialized for slot:", this.adSlot);*/
+        console.log("ADSENSE VARIABLE");
       } catch (e) {
-        console.error("AdSense initialization error for slot:", this.adSlot, e);
+        console.log("ADSENSE VARIABLE invalid: ", e);
       }
     }, 100);
   }
