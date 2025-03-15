@@ -16,7 +16,7 @@ import { customElement, property } from "lit/decorators.js";
 @customElement("google-ad")
 export class GoogleAdElement extends LitElement {
   // Configurable properties
-  @property({ type: String }) adClient = "ca-pub-7035513310742290";
+  @property({ type: String }) adClient = "ca-pub-7012197971455543";
   @property({ type: String }) adSlot = "5220834834";
   @property({ type: String }) adFormat = "auto";
   @property({ type: Boolean }) fullWidthResponsive = true;
