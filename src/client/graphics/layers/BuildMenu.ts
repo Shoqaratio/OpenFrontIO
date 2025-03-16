@@ -19,6 +19,7 @@ import portIcon from "../../../../resources/images/PortIcon.svg";
 import mirvIcon from "../../../../resources/images/MIRVIcon.svg";
 import cityIcon from "../../../../resources/images/CityIconWhite.svg";
 import capitalIcon from "../../../../resources/images/CapitalIcon.svg";
+import enterpriseIcon from "../../../../resources/images/EnterpriseIcon.svg";
 import shieldIcon from "../../../../resources/images/ShieldIconWhite.svg";
 import { renderNumber } from "../../Utils";
 import { GameView, PlayerView } from "../../../core/game/GameView";
@@ -88,7 +89,12 @@ const buildTable: BuildItemDisplay[][] = [
       unitType: UnitType.Capital,
       icon: capitalIcon,
       description:
-        "Increase max population, better than city. You can only have one.",
+        "Increase max population, better than city. You can only have one",
+    },
+    {
+      unitType: UnitType.Enterprise,
+      icon: enterpriseIcon,
+      description: "Generate gold based on population",
     },
   ],
 ];

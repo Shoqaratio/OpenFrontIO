@@ -8,6 +8,8 @@ import missileSiloIcon from "../../../../resources/images/buildings/silo1.png";
 import SAMMissileIcon from "../../../../resources/images/buildings/silo4.png";
 import shieldIcon from "../../../../resources/images/buildings/fortAlt2.png";
 import cityIcon from "../../../../resources/images/buildings/cityAlt1.png";
+import capitalIcon from "../../../../resources/images/buildings/Extra/city5.png";
+import enterpriseIcon from "../../../../resources/images/buildings/Extra/city4.png";
 import { GameView, UnitView } from "../../../core/game/GameView";
 import { Cell, UnitType } from "../../../core/game/Game";
 import { GameUpdateType } from "../../../core/game/GameUpdates";
@@ -40,9 +42,14 @@ export class StructureLayer implements Layer {
       territoryRadius: 6.525,
     },
     [UnitType.Capital]: {
-      icon: cityIcon,
+      icon: capitalIcon,
       borderRadius: 13.525,
       territoryRadius: 11.525, // bigger than city because this is a capital u know
+    },
+    [UnitType.Enterprise]: {
+      icon: enterpriseIcon,
+      borderRadius: 8.525,
+      territoryRadius: 6.525,
     },
     [UnitType.MissileSilo]: {
       icon: missileSiloIcon,

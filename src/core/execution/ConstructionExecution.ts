@@ -18,6 +18,7 @@ import { MissileSiloExecution } from "./MissileSiloExecution";
 import { NukeExecution } from "./NukeExecution";
 import { PortExecution } from "./PortExecution";
 import { WarshipExecution } from "./WarshipExecution";
+import { EnterpriseExecution } from "./EnterpriseExecution";
 
 export class ConstructionExecution implements Execution {
   private player: Player;
@@ -125,6 +126,9 @@ export class ConstructionExecution implements Execution {
         break;
       case UnitType.Capital:
         this.mg.addExecution(new CityExecution(player.id(), this.tile));
+        break;
+      case UnitType.Enterprise:
+        this.mg.addExecution(new EnterpriseExecution(player.id(), this.tile));
         break;
       default:
         throw Error(`unit type ${this.constructionType} not supported`);
