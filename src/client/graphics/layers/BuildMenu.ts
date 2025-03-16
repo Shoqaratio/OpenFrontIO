@@ -87,7 +87,8 @@ const buildTable: BuildItemDisplay[][] = [
     {
       unitType: UnitType.Capital,
       icon: capitalIcon,
-      description: "Increase max population, better than city",
+      description:
+        "Increase max population, better than city. You can only have one.",
     },
   ],
 ];

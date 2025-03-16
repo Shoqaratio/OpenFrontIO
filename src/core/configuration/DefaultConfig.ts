@@ -290,15 +290,14 @@ export class DefaultConfig implements Config {
           cost: (p: Player) =>
             p.type() == PlayerType.Human &&
             this.infiniteGold() &&
-            UnitType.Capital.length < 1 // jsuis trop débile aaaaaa
+            p.unitsIncludingConstruction(UnitType.Capital).length < 1
               ? 0
-              : Math.min(
-                  5_000_000,
-                  Math.pow(
+              : p.unitsIncludingConstruction(UnitType.Capital).length >= 1
+                ? Infinity
+                : Math.pow(
                     2,
                     p.unitsIncludingConstruction(UnitType.Capital).length,
                   ) * 2_500_000,
-                ),
           territoryBound: true,
           constructionDuration: this.instantBuild() ? 0 : 2 * 10,
         };
