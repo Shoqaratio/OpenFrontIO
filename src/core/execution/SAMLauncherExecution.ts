@@ -20,7 +20,7 @@ export class SAMLauncherExecution implements Execution {
 
   private target: Unit = null;
 
-  private searchRange = 100;
+  private searchRange = 150;
 
   private missileAttackRate = 50;
   private lastMissileAttack = 0;

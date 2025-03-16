@@ -290,7 +290,7 @@ export class DefaultConfig implements Config {
           cost: (p: Player) =>
             p.type() == PlayerType.Human &&
             this.infiniteGold() &&
-            UnitType.Capital.length > 1
+            UnitType.Capital.length < 1 // jsuis trop débile aaaaaa
               ? 0
               : Math.min(
                   5_000_000,

@@ -41,8 +41,8 @@ export class StructureLayer implements Layer {
     },
     [UnitType.Capital]: {
       icon: cityIcon,
-      borderRadius: 10.525,
-      territoryRadius: 8.525,
+      borderRadius: 13.525,
+      territoryRadius: 11.525, // bigger than city because this is a capital u know
     },
     [UnitType.MissileSilo]: {
       icon: missileSiloIcon,

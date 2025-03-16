@@ -11,12 +11,14 @@ import {
 import { BuildUnitIntentEvent } from "../../Transport";
 import atomBombIcon from "../../../../resources/images/NukeIconWhite.svg";
 import hydrogenBombIcon from "../../../../resources/images/MushroomCloudIconWhite.svg";
+import tsarbombIcon from "../../../../resources/images/TsarBombIcon.svg";
 import warshipIcon from "../../../../resources/images/BattleshipIconWhite.svg";
 import missileSiloIcon from "../../../../resources/images/MissileSiloIconWhite.svg";
 import goldCoinIcon from "../../../../resources/images/GoldCoinIcon.svg";
 import portIcon from "../../../../resources/images/PortIcon.svg";
 import mirvIcon from "../../../../resources/images/MIRVIcon.svg";
 import cityIcon from "../../../../resources/images/CityIconWhite.svg";
+import capitalIcon from "../../../../resources/images/CapitalIcon.svg";
 import shieldIcon from "../../../../resources/images/ShieldIconWhite.svg";
 import { renderNumber } from "../../Utils";
 import { GameView, PlayerView } from "../../../core/game/GameView";
@@ -48,13 +50,13 @@ const buildTable: BuildItemDisplay[][] = [
     },
     {
       unitType: UnitType.TsarBomb,
-      icon: hydrogenBombIcon,
-      description: "Big big explosion",
+      icon: tsarbombIcon,
+      description: "Very large explosion",
     },
     {
       unitType: UnitType.Warship,
       icon: warshipIcon,
-      description: "Captures trade ships, destroys ships and boats",
+      description: "Captures trade ships, destroys enemy ships and boats",
     },
     {
       unitType: UnitType.Port,
@@ -84,8 +86,8 @@ const buildTable: BuildItemDisplay[][] = [
     },
     {
       unitType: UnitType.Capital,
-      icon: cityIcon,
-      description: "Create capital for your country",
+      icon: capitalIcon,
+      description: "Increase max population, better than city",
     },
   ],
 ];
