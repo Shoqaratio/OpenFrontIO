@@ -562,9 +562,8 @@ export class DefaultConfig implements Config {
   goldAdditionRate(player: Player): number {
     return (
       Math.sqrt(player.workers() * player.numTilesOwned()) / 200 +
-      ((player.units(UnitType.Enterprise).length / 10) * player.population()) /
-        150
-    );
+      (player.units(UnitType.Enterprise).length * player.workers()) / 150
+    ); // based on workers now
   }
 
   troopAdjustmentRate(player: Player): number {
